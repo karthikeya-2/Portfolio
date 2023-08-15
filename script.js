@@ -1,19 +1,6 @@
-// script.js
-
-// Smooth scrolling
-const scrollLinks = document.querySelectorAll('a[href^="#"]');
-for (const link of scrollLinks) {
-  link.addEventListener('click', smoothScroll);
-}
-
-function smoothScroll(e) {
-  e.preventDefault();
-  const targetId = this.getAttribute('href');
-  const targetElement = document.querySelector(targetId);
-  if (targetElement) {
-    window.scrollTo({
-      top: targetElement.offsetTop,
-      behavior: 'smooth'
-    });
-  }
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
 }
